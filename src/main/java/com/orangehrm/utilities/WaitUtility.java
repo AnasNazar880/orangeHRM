@@ -61,4 +61,11 @@ public class WaitUtility {
         wait.ignoring(NoSuchElementException.class);
         wait.until(ExpectedConditions.alertIsPresent());
     }
+    public void hardWait(){
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
